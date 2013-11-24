@@ -33,3 +33,10 @@ function wpboot_the_cateogry( $separator = ' ' ) {
       echo '<a class="btn btn-default" href="'. get_category_link( $category->cat_ID ) .'">' . $category->cat_name . '</a>';
    }
 }
+
+// setup theme
+add_action( 'after_setup_theme', 'wpboot_setup' );
+function wpboot_setup() {
+   // register main navigation menu
+   register_nav_menu( 'main-menu', __( 'Main Menu' ) );
+}
