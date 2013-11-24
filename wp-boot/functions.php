@@ -1,5 +1,7 @@
 <?php
 
+include 'classes/nav-menu-walker.php';
+
 // enqueue resources
 add_action( 'wp_head', 'wpboot_enqueue_styles' );
 function wpboot_enqueue_styles() {

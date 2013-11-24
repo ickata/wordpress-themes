@@ -11,3 +11,5 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 
 body { padding-top: 70px }
 .admin-bar .navbar-fixed-top { top: 28px }
+
+.navbar-nav li:hover .dropdown-menu { display: block }
