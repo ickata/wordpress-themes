@@ -22,8 +22,12 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                <header>
                   <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+                  <p class="text-muted"><?php the_date() ?> <?php edit_post_link() ?></p>
                </header>
                <?php the_content(); ?>
+               <footer>
+                  <?php the_category(', ') ?>
+               </footer>
             </article>
             <!-- post list ends -->
             <?php endwhile; endif ?>
