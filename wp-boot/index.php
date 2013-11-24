@@ -14,7 +14,21 @@
       <!-- wp_head ends -->
    </head>
    <body <?php body_class() ?>>
-      <h1>Hello, world!</h1>
+      <div class="container">
+         <!-- main column -->
+         <div class="col-md-8">
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <!-- post list starts -->
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+               <header>
+                  <h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+               </header>
+               <?php the_content(); ?>
+            </article>
+            <!-- post list ends -->
+            <?php endwhile; endif ?>
+         </div>
+      </div>
       <!-- wp_footer starts -->
       <?php wp_footer() ?>
       <!-- wp_footer ends -->
