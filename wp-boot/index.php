@@ -28,6 +28,10 @@
             <!-- post list ends -->
             <?php endwhile; endif ?>
          </div>
+         <!-- sidebar -->
+         <div class="col-md-4">
+            <?php dynamic_sidebar( 'main-sidebar' ); ?>
+         </div>
       </div>
       <!-- wp_footer starts -->
       <?php wp_footer() ?>
