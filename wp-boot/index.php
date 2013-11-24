@@ -26,7 +26,7 @@
                </header>
                <?php the_content(); ?>
                <footer>
-                  <?php the_category(', ') ?>
+                  <?php wpboot_the_cateogry() ?>
                </footer>
             </article>
             <!-- post list ends -->

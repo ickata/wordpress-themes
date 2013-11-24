@@ -23,3 +23,13 @@ function wpboot_register_sidebars() {
       'after_title'   => '</h3>',
    ) );
 }
+
+// print categories with custom style
+function wpboot_the_cateogry( $separator = ' ' ) {
+   global $post;
+   $categories = get_the_category( $post->ID );
+   foreach ( $categories as $i => $category ) {
+      echo $i > 0 ? $separator : '';
+      echo '<a class="btn btn-default" href="'. get_category_link( $category->cat_ID ) .'">' . $category->cat_name . '</a>';
+   }
+}
