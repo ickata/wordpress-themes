@@ -1,0 +1,40 @@
+@import "../bootstrap/less/bootstrap.less";
+
+table {
+   &:extend(.table);
+   &:extend(.table-bordered);
+   > thead,
+   > tbody,
+   > tfoot {
+      > tr {
+         > th,
+         > td {
+            &:extend(.table > tfoot > tr > th);
+            &:extend(.table-bordered > tfoot > tr > th);
+         }
+      }
+   }
+   > thead > tr > th {
+      &:extend(.table > thead > tr > th);
+      &:extend(.table-bordered > thead > tr > th);
+   }
+   > caption + thead,
+   > colgroup + thead,
+   > thead:first-child {
+   > tr:first-child {
+      > th,
+      > td {
+            &:extend(.table > caption + thead > th);
+            &:extend(.table-bordered > caption + thead > th);
+         }
+      }
+   }
+   > tbody + tbody {
+      &:extend(.table > tbody + tbody);
+      &:extend(.table-bordered > tbody + tbody);
+   }
+   .table {
+      &:extend(.table .table);
+      &:extend(.table-bordered .tabe);
+   }
+}
