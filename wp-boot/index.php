@@ -61,7 +61,7 @@
                </header>
                <?php the_content(); ?>
                <footer>
-                  <?php wpboot_the_cateogry() ?>
+                  <?php wpboot_the_category() ?>
                </footer>
             </article>
             <!-- post list ends -->
