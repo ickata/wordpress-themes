@@ -30,7 +30,7 @@ function wpboot_register_sidebars() {
 }
 
 // print categories with custom style
-function wpboot_the_cateogry( $separator = ' ' ) {
+function wpboot_the_category( $separator = ' ' ) {
    global $post;
    $categories = get_the_category( $post->ID );
    foreach ( $categories as $i => $category ) {
